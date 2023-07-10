@@ -1,7 +1,7 @@
 "use client";
 
 import { Button } from "@/components/ui/button";
-import { BillboardColumn } from "./columns";
+import { OrderColumn } from "./columns";
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -18,7 +18,7 @@ import axios from "axios";
 import AlertModal from "@/components/modals/AlertModal";
 
 interface CellActionProps {
-  data: BillboardColumn;
+  data: OrderColumn;
 }
 export default function CellAction({ data }: CellActionProps) {
   const router = useRouter();
