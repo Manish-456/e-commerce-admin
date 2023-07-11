@@ -75,7 +75,7 @@ export async function PATCH(
         return NextResponse.json(color)
 
     } catch (error) {
-        console.log(`[COLOR.PATCH] `, error);
+
         return new NextResponse("Internal Error", { status: 500 })
     }
 }
@@ -110,7 +110,6 @@ export async function DELETE(
         })
 
     } catch (error) {
-        console.log(`[COLOR.DELETE] `, error);
         return new NextResponse("Internal Error", { status: 500 })
     }
 }

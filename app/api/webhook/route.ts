@@ -23,7 +23,6 @@ export async function POST(req: Request) {
 
     const session = event.data.object as Stripe.Checkout.Session;
     const address = session ?.customer_details ?.address;
-    console.log(`address : ${address}`);
     const addressComponents = [
         address ?.line1,
         address ?.line2,
@@ -33,7 +32,7 @@ export async function POST(req: Request) {
     ]
 
     const addressString = addressComponents.filter(c => c !== null).join(', ');
-  console.log(`[ORDERID] : ${session?.metadata?.orderId}`)
+ 
     if (event ?.type === "checkout.session.completed") {
         const order = await prismadb.order.update({
             where: {

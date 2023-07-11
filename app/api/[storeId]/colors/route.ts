@@ -40,7 +40,7 @@ export async function POST(
         return NextResponse.json(color)
 
     } catch (error) {
-        console.log(`[COLORS.POST] `, error);
+
         return new NextResponse("Internal Error", { status: 500 })
     }
 }
@@ -67,7 +67,7 @@ export async function GET(
         return NextResponse.json(colors)
 
     } catch (error) {
-        console.log(`[COLORS.GET] `, error);
+
         return new NextResponse("Internal Error", { status: 500 })
     }
 }

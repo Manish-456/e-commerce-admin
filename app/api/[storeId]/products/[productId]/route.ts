@@ -33,7 +33,6 @@ export async function GET(
         return NextResponse.json(product);
 
     } catch (error) {
-        console.log(`[PRODUCT.GET] `, error);
         return new NextResponse("Internal Error", { status: 500 })
     }
 }
@@ -116,7 +115,7 @@ export async function PATCH(
         return NextResponse.json(product)
 
     } catch (error) {
-        console.log(`[PRODUCT.PATCH] `, error);
+
         return new NextResponse("Internal Error", { status: 500 })
     }
 }
@@ -151,7 +150,7 @@ export async function DELETE(
         })
 
     } catch (error) {
-        console.log(`[PRODUCT.DELETE] `, error);
+
         return new NextResponse("Internal Error", { status: 500 })
     }
 }

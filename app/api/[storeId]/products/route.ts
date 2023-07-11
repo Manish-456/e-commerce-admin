@@ -67,7 +67,7 @@ export async function POST(
         return NextResponse.json(product)
 
     } catch (error) {
-        console.log(`[BILLBOARD.POST] `, error);
+
         return new NextResponse("Internal Error", { status: 500 })
     }
 }
@@ -112,7 +112,7 @@ export async function GET(
         return NextResponse.json(products);
 
     } catch (error) {
-        console.log(`[PRODUCT.GET] `, error);
+
         return new NextResponse("Internal Error", { status: 500 })
     }
 }

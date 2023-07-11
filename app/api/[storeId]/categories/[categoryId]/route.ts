@@ -30,7 +30,7 @@ export async function GET(
         return NextResponse.json(category);
 
     } catch (error) {
-        console.log(`[CATEGORY.DELETE] `, error);
+    
         return new NextResponse("Internal Error", { status: 500 })
     }
 }
@@ -78,7 +78,7 @@ export async function PATCH(
         return NextResponse.json(category);
 
     } catch (error) {
-        console.log(`[BILLBOARD.PATCH] `, error);
+      
         return new NextResponse("Internal Error", { status: 500 })
     }
 }
@@ -113,7 +113,7 @@ export async function DELETE(
         })
 
     } catch (error) {
-        console.log(`[BILLBOARD.DELETE] `, error);
+       
         return new NextResponse("Internal Error", { status: 500 })
     }
 }
